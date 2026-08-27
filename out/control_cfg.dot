@@ -1,0 +1,21 @@
+digraph "CFG" {
+  rankdir=TB;
+  node [fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  n1 [label="START", shape=ellipse, style="filled", fillcolor="#d9e1f2"];
+  n2 [label="STOP", shape=ellipse, style="filled", fillcolor="#d9e1f2"];
+  n3 [label="x = int(input())", shape=box, style="filled", fillcolor="#ffffff"];
+  n4 [label="y = 0", shape=box, style="filled", fillcolor="#ffffff"];
+  n5 [label="x > 0", shape=diamond, style="filled", fillcolor="#fce4d6"];
+  n6 [label="y = x * 2", shape=box, style="filled", fillcolor="#ffffff"];
+  n7 [label="y = -x", shape=box, style="filled", fillcolor="#ffffff"];
+  n8 [label="print(y)", shape=box, style="filled", fillcolor="#ffffff"];
+  n1 -> n3 [style=solid];
+  n3 -> n4 [style=solid];
+  n4 -> n5 [style=solid];
+  n5 -> n6 [style=solid, label="T"];
+  n5 -> n7 [style=solid, label="F"];
+  n6 -> n8 [style=solid];
+  n7 -> n8 [style=solid];
+  n8 -> n2 [style=solid];
+}

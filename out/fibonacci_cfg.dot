@@ -1,0 +1,29 @@
+digraph "CFG" {
+  rankdir=TB;
+  node [fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  n1 [label="START", shape=ellipse, style="filled", fillcolor="#d9e1f2"];
+  n2 [label="STOP", shape=ellipse, style="filled", fillcolor="#d9e1f2"];
+  n3 [label="n = int(input())", shape=box, style="filled", fillcolor="#ffffff"];
+  n4 [label="a = 0", shape=box, style="filled", fillcolor="#ffffff"];
+  n5 [label="b = 1", shape=box, style="filled", fillcolor="#ffffff"];
+  n6 [label="i = 0", shape=box, style="filled", fillcolor="#ffffff"];
+  n7 [label="i < n", shape=diamond, style="filled", fillcolor="#fce4d6"];
+  n8 [label="next_val = a + b", shape=box, style="filled", fillcolor="#ffffff"];
+  n9 [label="a = b", shape=box, style="filled", fillcolor="#ffffff"];
+  n10 [label="b = next_val", shape=box, style="filled", fillcolor="#ffffff"];
+  n11 [label="i = i + 1", shape=box, style="filled", fillcolor="#ffffff"];
+  n12 [label="print(a)", shape=box, style="filled", fillcolor="#ffffff"];
+  n1 -> n3 [style=solid];
+  n3 -> n4 [style=solid];
+  n4 -> n5 [style=solid];
+  n5 -> n6 [style=solid];
+  n6 -> n7 [style=solid];
+  n7 -> n8 [style=solid, label="T"];
+  n8 -> n9 [style=solid];
+  n9 -> n10 [style=solid];
+  n10 -> n11 [style=solid];
+  n11 -> n7 [style=solid];
+  n7 -> n12 [style=solid, label="F"];
+  n12 -> n2 [style=solid];
+}
