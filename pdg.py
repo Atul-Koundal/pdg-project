@@ -20,6 +20,7 @@ import os
 import subprocess
 import sys
 
+from pdgtool.cdg import build_cdg
 from pdgtool.cfg import build_cfg
 from pdgtool.frontend import SubsetError, parse_file, validate
 from pdgtool.graph import Graph
@@ -84,7 +85,8 @@ def main(argv: list[str] | None = None) -> int:
         print("CFG:")
         render(build_cfg(tree), base + "_cfg")
     if want in ("cdg", "all"):
-        print("CDG: not implemented yet (Phase 3 - control dependence).")
+        print("CDG:")
+        render(build_cdg(build_cfg(tree)), base + "_cdg")
     if want in ("ddg", "all"):
         print("DDG: not implemented yet (Phase 4 - data dependence).")
 

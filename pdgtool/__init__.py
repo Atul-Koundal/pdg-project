@@ -1,8 +1,9 @@
 """pdgtool - a small Program Dependence Graph toolkit.
 
 Phase 2 provides the front end (parse + subset validation) and the
-control flow graph builder. The control dependence graph (Phase 3) and
-data dependence graph (Phase 4) will be added as sibling modules.
+control flow graph builder. Phase 3 adds the post-dominator analysis and
+the control dependence graph. The data dependence graph (Phase 4) will be
+added as a sibling module.
 """
 
-__version__ = "0.2.0"  # 0.x while only the CFG stage is implemented
+__version__ = "0.3.0"  # 0.x while the data dependence stage is still pending
