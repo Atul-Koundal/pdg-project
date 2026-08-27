@@ -7,7 +7,7 @@ project (based on Ferrante, Ottenstein & Warren, 1987).
 ## Status
 
 - Phase 2 (done): front end + control flow graph (CFG).
-- Phase 3 (todo): control dependence graph (CDG).
+- Phase 3 (done): control dependence graph (CDG).
 - Phase 4 (todo): data dependence graph (DDG).
 
 ## Setup
@@ -44,6 +44,8 @@ pdg.py              command-line entry point
 pdgtool/
   frontend.py       parse a file and validate the accepted subset
   cfg.py            control flow graph construction
+  postdom.py        post-dominator tree (support for control dependence)
+  cdg.py            control dependence graph construction
   graph.py          shared graph type + Graphviz rendering
 examples/           the four Phase 1 example programs
 ```
